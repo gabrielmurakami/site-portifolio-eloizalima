@@ -14,7 +14,21 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         {/* Debug overlay - temporary */}
-        <div style={{position:'fixed',top:8,left:8,zIndex:9999,background:'rgba(0,0,0,0.5)',color:'#fff',padding:'4px 8px',borderRadius:4,fontSize:12}}>debug: app</div>
+        <div
+          style={{
+            position: "fixed",
+            top: 8,
+            left: 8,
+            zIndex: 9999,
+            background: "rgba(0,0,0,0.5)",
+            color: "#fff",
+            padding: "4px 8px",
+            borderRadius: 4,
+            fontSize: 12,
+          }}
+        >
+          debug: app
+        </div>
         <Toaster />
         <Sonner />
         <BrowserRouter basename="/">
