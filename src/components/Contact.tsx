@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "emailjs-com";
-import { fromTheme } from "tailwind-merge";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
