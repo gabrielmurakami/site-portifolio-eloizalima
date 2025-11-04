@@ -34,7 +34,7 @@ const Services = () => {
           </h2>
           <div className="w-16 h-0.5 bg-primary/30 rounded-full mx-auto"></div>
           <p className="text-xl text-foreground max-w-2xl mx-auto font-light leading-relaxed">
-            Ofereco diferentes modalidades de atendimento para atender às suas
+            Ofereço diferentes modalidades de atendimento para atender às suas
             necessidades de forma personalizada e acolhedora.
           </p>
         </div>
