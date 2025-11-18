@@ -3,32 +3,33 @@ import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-border/50 py-16">
-      <div className="max-w-6xl mx-auto container-padding">
-        <div className="text-center space-y-8">
+    <footer className="bg-white border-t border-border/30 py-16 lg:py-20 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      
+      <div className="max-w-6xl mx-auto container-padding relative z-10">
+        <div className="text-center space-y-8 lg:space-y-10">
           {/* Logo */}
-          <div className="font-serif text-3xl font-medium text-primary-foreground">
+          <div className="font-serif text-3xl lg:text-4xl font-semibold text-primary animate-fade-in">
             Eloiza Lima
           </div>
           
           {/* Tagline */}
-          <p className="text-muted-foreground max-w-md mx-auto font-light text-lg">
+          <p className="text-muted-foreground max-w-md mx-auto font-light text-lg lg:text-xl leading-relaxed">
             Cuidando da sua saúde mental com carinho, profissionalismo e dedicação.
           </p>
           
           {/* Professional Info */}
-          <div className="space-y-3 text-muted-foreground font-light">
-            <p>CRP 06/220078 - Psicóloga Clínica</p>
+          <div className="space-y-3 text-muted-foreground font-light text-base">
+            <p className="font-medium">CRP 06/220078 - Psicóloga Clínica</p>
             <p>Especialista em Terapia Cognitivo-Comportamental</p>
           </div>
           
           {/* Divider */}
-          <div className="w-20 h-px bg-border/50 mx-auto"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-border to-transparent mx-auto"></div>
           
           {/* Copyright */}
           <div className="flex items-center justify-center space-x-3 text-muted-foreground font-light">
             <span>© 2025 Eloiza Lima. Todos os direitos reservados.</span>
-            {/* <Heart size={16} className="text-primary/60" /> */}
           </div>
           
           {/* Additional Info */}
