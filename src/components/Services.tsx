@@ -1,4 +1,4 @@
-import { Users, User, Video, MapPin } from "lucide-react";
+import { Users, User, Video, MapPin, Clock } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -26,41 +26,44 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="section-padding bg-secondary/20">
-      <div className="max-w-6xl mx-auto container-padding">
-        <div className="text-center space-y-6 mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif text-foreground">
+    <section id="servicos" className="section-padding gradient-bg relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      
+      <div className="max-w-7xl mx-auto container-padding">
+        <div className="text-center space-y-6 mb-16 lg:mb-24 animate-fade-in-up">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-foreground">
             Serviços
           </h2>
-          <div className="w-16 h-0.5 bg-primary/30 rounded-full mx-auto"></div>
-          <p className="text-xl text-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-transparent rounded-full mx-auto"></div>
+          <p className="text-xl md:text-2xl text-foreground/90 max-w-3xl mx-auto font-light leading-relaxed">
             Ofereço diferentes modalidades de atendimento para atender às suas
             necessidades de forma personalizada e acolhedora.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-10 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group"
+              className="glass-effect p-10 lg:p-12 rounded-[2rem] border-2 hover:border-primary/30 hover-lift group animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="space-y-8">
-                <div className="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 smooth-transition">
-                  <service.icon className="w-10 h-10 text-primary-foreground" />
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition group-hover:shadow-lg">
+                  <service.icon className="w-12 h-12 text-primary-foreground" />
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-serif text-primary-foreground">
+                  <h3 className="text-2xl lg:text-3xl font-serif text-primary-foreground">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="text-muted-foreground leading-relaxed font-light text-lg">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-border/50">
-                  <span className="text-sm font-medium text-primary-foreground">
+                <div className="pt-6 border-t border-border/50">
+                  <span className="text-base font-semibold text-primary-foreground">
                     Duração: {service.duration}
                   </span>
                 </div>
@@ -70,37 +73,45 @@ const Services = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="bg-white p-10 rounded-3xl border border-border/50">
-          <h3 className="text-2xl font-serif text-primary-foreground mb-8 text-center">
+        <div className="glass-effect p-10 lg:p-12 rounded-[2rem] border-2 hover:border-primary/30 smooth-transition animate-fade-in-up">
+          <h3 className="text-2xl lg:text-3xl font-serif text-primary-foreground mb-10 lg:mb-12 text-center">
             Informações Importantes
           </h3>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-3">
-              <strong className="text-primary-foreground block text-lg">
+          <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
+            <div className="space-y-4 text-center group">
+              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/10 smooth-transition">
+                <Clock className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <strong className="text-primary-foreground block text-xl font-semibold">
                 Horários
               </strong>
-              <p className="text-muted-foreground font-light">
+              <p className="text-muted-foreground font-light text-lg leading-relaxed">
                 Segunda a sexta: 18h às 22h
                 <br />
                 Sábados: a combinar
               </p>
             </div>
-            <div className="space-y-3">
-              <strong className="text-primary-foreground block text-lg">
+            <div className="space-y-4 text-center group">
+              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/10 smooth-transition">
+                <Video className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <strong className="text-primary-foreground block text-xl font-semibold">
                 Modalidades
               </strong>
-              <p className="text-muted-foreground font-light">
-                {/* Presencial */}
+              <p className="text-muted-foreground font-light text-lg leading-relaxed">
                 Online e
                 <br />
                 Individual
               </p>
             </div>
-            <div className="space-y-3">
-              <strong className="text-primary-foreground block text-lg">
+            <div className="space-y-4 text-center group">
+              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/10 smooth-transition">
+                <User className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <strong className="text-primary-foreground block text-xl font-semibold">
                 Abordagem
               </strong>
-              <p className="text-muted-foreground font-light">
+              <p className="text-muted-foreground font-light text-lg leading-relaxed">
                 Terapia Cognitivo-Comportamental
                 <br />
                 Técnicas humanísticas
