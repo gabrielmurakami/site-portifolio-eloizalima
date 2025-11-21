@@ -17,7 +17,8 @@ export default defineConfig(async ({ mode }) => {
   }
 
   return {
-    base: "/", // use absolute base for preview/prod
+    base: "/site-portifolio-eloizalima", // use absolute base for preview/prod
+    /*
     server: {
       host: "::",
       port: 8080,
@@ -28,5 +29,6 @@ export default defineConfig(async ({ mode }) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    */
   };
 });
